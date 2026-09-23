@@ -1,8 +1,12 @@
-\# Resume–JD Matcher Frontend
+\# Resume–JD Matcher (Frontend)
 
 
 
 A React-based frontend for a machine learning-powered Resume–Job Description Matcher. The application allows users to upload a resume and job description and view matching results, detected job domain, and skill gaps.
+
+
+
+> Backend repo: \[resume-jd-matcher](https://github.com/Spoorthi-SD/resume-jd-matcher)
 
 
 
@@ -44,7 +48,7 @@ A React-based frontend for a machine learning-powered Resume–Job Description M
 
 \- CSS
 
-\- FastAPI backend
+\- FastAPI backend (consumed via REST API)
 
 
 
@@ -56,7 +60,7 @@ A React-based frontend for a machine learning-powered Resume–Job Description M
 
 2\. The user uploads or enters a job description.
 
-3\. The React frontend sends the data to the FastAPI backend.
+3\. The React frontend sends the data to the FastAPI backend (`POST /api/analyze`).
 
 4\. The backend processes the resume and job description using machine learning techniques.
 
@@ -67,6 +71,8 @@ A React-based frontend for a machine learning-powered Resume–Job Description M
 \## Project Structure
 
 
+
+```
 
 resume-jd-matcher-frontend/
 
@@ -98,6 +104,8 @@ resume-jd-matcher-frontend/
 
 └── README.md
 
+```
+
 
 
 \## Installation
@@ -106,25 +114,23 @@ resume-jd-matcher-frontend/
 
 Clone the repository:
 
-
+```bash
 
 git clone https://github.com/Spoorthi-SD/resume-jd-matcher-frontend.git
 
-
-
-Go to the project folder:
-
-
-
 cd resume-jd-matcher-frontend
+
+```
 
 
 
 Install dependencies:
 
-
+```bash
 
 npm install
+
+```
 
 
 
@@ -132,19 +138,27 @@ npm install
 
 
 
+Make sure the \[backend](https://github.com/Spoorthi-SD/resume-jd-matcher) is running first (default: `http://localhost:8000`).
+
+
+
 Start the development server:
 
-
+```bash
 
 npm run dev
 
+```
 
 
-The frontend will usually run at:
 
+The frontend will run at:
 
+```
 
 http://localhost:5173
+
+```
 
 
 
@@ -152,19 +166,13 @@ http://localhost:5173
 
 
 
-This frontend communicates with a separate FastAPI backend.
+This frontend communicates with a separate FastAPI backend for all resume and job description analysis.
 
 
 
-Backend repository:
+\- Backend repository: https://github.com/Spoorthi-SD/resume-jd-matcher
 
-
-
-https://github.com/Spoorthi-SD/resume-jd-matcher
-
-
-
-The backend provides the resume and job description analysis API.
+\- API endpoint used: `POST /api/analyze`
 
 
 
@@ -172,7 +180,7 @@ The backend provides the resume and job description analysis API.
 
 
 
-The React frontend is developed and tested locally. The backend is maintained in a separate repository.
+The React frontend is developed and tested locally. The backend is maintained in a separate repository (linked above).
 
 
 
@@ -181,6 +189,4 @@ The React frontend is developed and tested locally. The backend is maintained in
 
 
 \*\*Spoorthi-SD\*\*
-
-
 
